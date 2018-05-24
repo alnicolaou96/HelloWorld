@@ -8,6 +8,29 @@ namespace HelloWorld
 {
     class Program
     {
+        static bool IsGodLike(int age)
+        {
+            bool status;
+            if (age % 2 == 0)
+            {
+                status = false;
+            }
+            else
+            {
+                status = true;
+            }
+            return status;
+        }
+        static string Reverse(string text)
+        {
+            char[] cArray = text.ToCharArray();
+            string reverse = " ";
+            for (int i = cArray.Length - 1; i > -1; i--)
+            {
+                reverse += cArray[i];
+            }
+            return reverse;
+        }
         static void Main(string[] args)
         {
             //part one greetings statement
@@ -197,8 +220,7 @@ namespace HelloWorld
             //    {
             //        Console.WriteLine("Sorry you are staying home.");
             //    }
-            //    Console.WriteLine("Add another? Type exit to quit");
-            //    action = Console.ReadLine();
+            //    Console.WriteLine("Add another? Type exit to quit");b
             //} while (action != "exit");
 
 
@@ -208,16 +230,24 @@ namespace HelloWorld
             //    foodAmount[i] = int.Parse(Console.ReadLine());
             //}
 
-            int size = 5; // equals the max number of columns and rows
-            int i, j;
-            for (i = 0; i <= size; i++)
-            {
-                for (j = 0; j < i; j++)
-                {
-                    Console.Write("*");
-                }
-                Console.WriteLine("");
-            }
+            //int size = 5; // equals the max number of columns and rows
+            //int i, j;
+            //for (i = 0; i <= size; i++)
+            //{
+            //    for (j = 0; j < i; j++)
+            //    {
+            //        Console.Write("*");
+            //    }
+            //    Console.WriteLine("");
+            //}
+
+
+            //Methods
+            isGodLikeOne = IsGodLike(ageOne);
+            Console.WriteLine("To say our hero is God like is " + isGodLikeOne);
+
+            Console.WriteLine("To say our hero is God like is " + isGodLikeOne);
+            Console.WriteLine(Reverse(messageTwo));
 
 
 
